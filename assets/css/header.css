@@ -6,7 +6,8 @@
   justify-content: center;
   align-items: center;
   row-gap: 3vh;
-  overflow-y: hidden;
+  overflow: hidden;
+  position: relative;
 }
 
 .header__h1 {
@@ -41,7 +42,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 0.8rem;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
   &:hover {
     cursor: pointer;
@@ -61,16 +62,18 @@
   background: linear-gradient(var(--morph1), var(--morph2));
   filter: blur(100px);
   animation: morph 5s infinite linear;
+  will-change: transform, border-radius;
 }
 
 
 @keyframes morph {
   0% {
     transform: rotate(0) scale(1);
+
   }
 
   50% {
-    transform: rotate(360deg) scale(1.1);
+    transform: rotate(180deg) scale(1.3);
   }
 
 
