@@ -1,5 +1,6 @@
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   box-sizing: border-box;
   font-family: 16px;
   --text-ligth: 200;
@@ -21,19 +22,21 @@
   --bg-secondary: white;
   --text: #222;
 
-  --morph1: #e5b2f7;
-  --morph2: #fff4a3;
+  --morph1: #89e6ec;
+  --morph2: rgb(135, 237, 131);
+
+  --buttonBorder: blue;
 }
 
 .body--dark {
-  --bg: #070732;
+  --bg: rgb(34, 34, 35);
   --bg-secondary: black;
   --text: #f0f0f0;
 
-  --morph1: #9400D3;
-  --morph2: #FFD700;
+  --morph1: rgb(86, 7, 122);
+  --morph2: rgb(197, 109, 15);
 
-
+  --buttonBorder: red;
 }
 
 .body {
