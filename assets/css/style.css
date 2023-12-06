@@ -2,23 +2,23 @@
   font-family: 'Roboto', sans-serif;
   font-family: 'Roboto Mono', monospace;
   box-sizing: border-box;
-  font-family: 16px;
+  font-size: 16px;
   --text-ligth: 200;
   --text-medium: 400;
   --text-bold: 600;
+  scroll-behavior: smooth;
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  text-decoration: none;
 }
 
 .body--ligth {
-  --bg: #f0f0f0;
+  --bg: rgb(244, 244, 227);
   --bg-secondary: white;
   --text: #222;
 
@@ -26,6 +26,7 @@
   --morph2: rgb(135, 237, 131);
 
   --buttonBorder: blue;
+  --filter--iframe: invert(1);
 }
 
 .body--dark {
@@ -37,25 +38,21 @@
   --morph2: rgb(197, 109, 15);
 
   --buttonBorder: red;
+  --filter--iframe: invert(-1);
 }
 
 .body {
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: background-color 0.5s linear(-0.46 -1%, 1.35 100%) 0s, color 0.5s linear(0.46 1%, -1.35 -100%) 0s;
   max-width: 100%;
+  --white: #f0f0f0;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
 }
 
-
-/* text selection */
-
-::selection {
-  background-color: var(--text);
-  color: var(--bg-secondary);
-}
-
-/* scroll */
-/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+/* barra de scroll */
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -75,12 +72,27 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--text);
-  border-radius: 20px;
-  border: none;
+  background-color: var(--buttonBorder);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: var(--bg);
+}
+
+/* selection */
+
+::selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+#progress {
+  background-color: var(--buttonBorder);
+  position: fixed;
+  top: 6vh;
+  left: 0;
+  z-index: 10;
+  border-top: 5px dashed var(--bg);
 }
