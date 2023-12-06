@@ -24,11 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   changeMode.addEventListener('click', function (e) {
-    // Obtener el contenido actual eliminando espacios en blanco al principio y al final
     const currentMode = modeText.textContent.trim();
-    // console.log(currentMode);
 
-    // Cambiar entre dark_mode y light_mode
     if (currentMode === 'light_mode') {
       modeText.textContent = 'dark_mode';
       body.classList.remove('body--dark');

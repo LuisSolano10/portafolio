@@ -81,8 +81,6 @@
   background-color: var(--bg);
 }
 
-/* selection */
-
 ::selection {
   background-color: var(--text);
   color: var(--bg);

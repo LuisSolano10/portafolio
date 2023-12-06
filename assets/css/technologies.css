@@ -24,7 +24,6 @@
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  /* la cara posterior del elemento no será visible */
   display: flex;
   align-items: center;
   justify-content: center;

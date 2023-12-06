@@ -1,6 +1,4 @@
-
 const progressbar = document.querySelector('#progress');
-
 progressbar.animate(
   [
     { width: 0 },
@@ -14,13 +12,8 @@ progressbar.animate(
   }
 );
 
-
-//animate sections
-
 const sections = document.querySelectorAll('section');
-
 for (const section of sections) {
-
   section.animate(
     [
       { opacity: 0.5, transform: 'translateY(150px)', scale: 0.7 },
@@ -37,4 +30,3 @@ for (const section of sections) {
     }
   );
 }
-

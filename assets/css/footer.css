@@ -1,7 +1,3 @@
-/* Establece el tamaño de fuente base en el elemento html */
-
-
-/* Estilo general del footer */
 .footer-distributed {
   background-color: var(--bg-secondary);
   color: var(--text);
@@ -17,7 +13,6 @@
   align-items: center;
 }
 
-/* Estilo del bloque izquierdo del footer */
 .footer__left {
   width: 70%;
 }
@@ -31,7 +26,6 @@
   font-size: 1rem;
 }
 
-/* Estilo del bloque central del footer */
 .footer__copy {
   text-align: center;
 }
@@ -49,7 +43,6 @@
   font-size: 0.8rem;
 }
 
-/* Estilo del bloque derecho del footer */
 .footer__right {
   width: 30%;
 }
@@ -63,15 +56,6 @@
   color: var(--text);
   text-decoration: none;
   transition: color 0.3s ease-out;
-}
-
-/* Modificadores para iconos de redes sociales */
-.footer__social-icon--facebook:hover {
-  color: #1877f2;
-}
-
-.footer__social-icon--twitter:hover {
-  color: #1da1f2;
 }
 
 .footer__social-icon--linkedin:hover {
@@ -93,5 +77,4 @@
   .footer__right {
     column-gap: 2rem;
   }
-
 }
